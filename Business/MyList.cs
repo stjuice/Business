@@ -87,5 +87,15 @@ namespace Business
             prev.NextItem = next.NextItem;
             Length--;
         }
+
+        [System.Runtime.CompilerServices.IndexerName("TheItem")]
+        public T this[int key]
+        {
+            get
+            {
+                return Get(key);
+            }
+        }
+
     }
 }
