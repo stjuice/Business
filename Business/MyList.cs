@@ -2,14 +2,15 @@
 
 namespace Business
 {
-    public class Item<T>
-    {
-        public T CurrentItem { get; set; }
-        public Item<T> NextItem { get; set; }
-    }
 
     public class MyList<T>
     {
+        class Item<U>
+        {
+            public U CurrentItem { get; set; }
+            public Item<U> NextItem { get; set; }
+        }
+
         Item<T> firstItem;
         public int Length { get; private set; }
 
