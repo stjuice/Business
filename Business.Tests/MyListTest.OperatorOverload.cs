@@ -13,8 +13,10 @@ namespace Business.Tests
             list.Add(12);
             list.Add(890);
             list.Add(54);
+            list.Add(89);
+            list.Add(44);
 
-            Assert.AreEqual(12, list[1]);
+            Assert.AreEqual(890, list[2]);
 
         }
     }
