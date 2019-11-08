@@ -16,7 +16,7 @@ namespace Business
 
         public void Enqueue(T item)
         {
-            if(firstItem == null)
+            if (firstItem == null)
             {
                 firstItem = new Item<T> 
                 { 
@@ -48,16 +48,13 @@ namespace Business
 
             var tmp = firstItem;
 
-            while(tmp!=null)
+            while (tmp!=null)
             {
                 tmp = tmp.NextItem;
             }
 
             tmp = new Item<T> { CurrentItem = res };
-
-
             return res;
-
         }
 
         public void Clear()

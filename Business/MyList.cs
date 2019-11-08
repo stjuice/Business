@@ -1,15 +1,12 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Business
 {
 
-    public class MyList<T>
+    public class MyList<T> : IEnumerable<T>
     {
-        class Item<U>
-        {
-            public U CurrentItem { get; set; }
-            public Item<U> NextItem { get; set; }
-        }
 
         Item<T> firstItem;
         public int Length { get; private set; }
@@ -83,7 +80,7 @@ namespace Business
                 prev = prev.NextItem;
                 next = next.NextItem;
             }
-            
+
             prev.NextItem = next.NextItem;
             Length--;
         }
@@ -97,5 +94,19 @@ namespace Business
             }
         }
 
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return (IEnumerator)GetEnumerator();
+        }
+
+        public MyListEnum<T> GetEnumerator()
+        {
+            return new MyListEnum<T>(firstItem);
+        }
+
+        IEnumerator<T> IEnumerable<T>.GetEnumerator()
+        {
+            return (IEnumerator<T>)GetEnumerator();
+        }
     }
 }
