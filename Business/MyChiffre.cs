@@ -12,12 +12,12 @@ namespace Business
         {
             textToEncrypt = text;
 
-            return EncryptDecrypt(text, keyWord);
+            return EncryptDecryptXOR(text, keyWord);
         }
 
-        public string Decrypt(string keyWord) => EncryptDecrypt(textToEncrypt, keyWord);
+        public string Decrypt(string keyWord) => EncryptDecryptXOR(textToEncrypt, keyWord);
 
-        string EncryptDecrypt(string encrypText, string keyWord)
+        string EncryptDecryptXOR(string encrypText, string keyWord)
         {
             var input = new StringBuilder(encrypText);
             var output = new StringBuilder(encrypText.Length);
