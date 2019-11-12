@@ -99,9 +99,9 @@ namespace Business
             return (IEnumerator)GetEnumerator();
         }
 
-        public MyListEnum<T> GetEnumerator()
+        public MyListEnumerator<T> GetEnumerator()
         {
-            return new MyListEnum<T>(firstItem);
+            return new MyListEnumerator<T>(firstItem);
         }
 
         IEnumerator<T> IEnumerable<T>.GetEnumerator()

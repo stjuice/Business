@@ -15,30 +15,16 @@ namespace Business
             this.numenator = numerator;
             this.denominator = denominator;
         }
-    }
-    public class RegularFraction
-    {
-        public Fraction Fraction { get; set; }
 
-        public RegularFraction(int num, int den)
+        public int GetNumerator() => numenator;
+
+        public int GetDenominator() => denominator;
+
+        public override string ToString()
         {
-            if (den == 0)
-                throw new ArgumentException("Denominator cannot be a zero");
-
-            Fraction = new Fraction(num, den);
-        }
-
-        public int GetNumerator() => Fraction.numenator;
-
-        public int GetDenominator() => Fraction.denominator;
-
-        public string GetFraction()
-        {
-            var numenator = GetNumerator();
-            var denominator = GetDenominator();
             int num;
 
-            var gcd = new int[] { numenator, denominator }.Aggregate(GCD);
+            var gcd = new int[] { numenator, denominator }.Aggregate(GreatestCommonDivisor);
 
             if (numenator > denominator)
             {
@@ -56,9 +42,9 @@ namespace Business
             return $"{numenator}/{denominator}";
         }
 
-        static int GCD(int a, int b) => b == 0 ? a : GCD(b, a % b);
+        static int GreatestCommonDivisor(int a, int b) => b == 0 ? a : GreatestCommonDivisor(b, a % b);
 
-        public static RegularFraction operator +(RegularFraction fraction1, RegularFraction fraction2)
+        public static Fraction operator +(Fraction fraction1, Fraction fraction2)
         {
             var num1 = fraction1.GetNumerator();
             var den1 = fraction1.GetDenominator();
@@ -69,10 +55,10 @@ namespace Business
             var num = num1 * den2 + num2 * den1;
             var den = den2 * den1;
 
-            return new RegularFraction(num, den);
+            return new Fraction(num, den);
         }
 
-        public static RegularFraction operator -(RegularFraction fraction1, RegularFraction fraction2)
+        public static Fraction operator -(Fraction fraction1, Fraction fraction2)
         {
             var num1 = fraction1.GetNumerator();
             var den1 = fraction1.GetDenominator();
@@ -83,10 +69,10 @@ namespace Business
             var num = num1 * den2 - num2 * den1;
             var den = den2 * den1;
 
-            return new RegularFraction(num, den);
+            return new Fraction(num, den);
         }
 
-        public static RegularFraction operator *(RegularFraction fraction1, RegularFraction fraction2)
+        public static Fraction operator *(Fraction fraction1, Fraction fraction2)
         {
             var num1 = fraction1.GetNumerator();
             var den1 = fraction1.GetDenominator();
@@ -97,10 +83,10 @@ namespace Business
             var num = num1 * num2;
             var den = den1 * den2;
 
-            return new RegularFraction(num, den);
+            return new Fraction(num, den);
         }
 
-        public static RegularFraction operator /(RegularFraction fraction1, RegularFraction fraction2)
+        public static Fraction operator /(Fraction fraction1, Fraction fraction2)
         {
             var num1 = fraction1.GetNumerator();
             var den1 = fraction1.GetDenominator();
@@ -111,10 +97,10 @@ namespace Business
             var num = num1 * den2;
             var den = den1 * num2;
 
-            return new RegularFraction(num, den);
+            return new Fraction(num, den);
         }
 
-        public static bool operator >(RegularFraction fraction1, RegularFraction fraction2)
+        public static bool operator >(Fraction fraction1, Fraction fraction2)
         {
             var num1 = fraction1.GetNumerator();
             var den1 = fraction1.GetDenominator();
@@ -127,9 +113,9 @@ namespace Business
             return res;
         }
 
-        public static bool operator <(RegularFraction fraction1, RegularFraction fraction2) => !(fraction1 > fraction2);
+        public static bool operator <(Fraction fraction1, Fraction fraction2) => !(fraction1 > fraction2);
 
-        public static bool operator ==(RegularFraction fraction1, RegularFraction fraction2)
+        public static bool operator ==(Fraction fraction1, Fraction fraction2)
         {
             var num1 = fraction1.GetNumerator();
             var den1 = fraction1.GetDenominator();
@@ -142,6 +128,18 @@ namespace Business
             return res;
         }
 
-        public static bool operator !=(RegularFraction fraction1, RegularFraction fraction2) => !(fraction1 == fraction2);
+        public static bool operator !=(Fraction fraction1, Fraction fraction2) => !(fraction1 == fraction2);
+
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return numenator+denominator;
+        }
     }
 }
+
+
