@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Business
 {
-    public class MyChiffre
+    public class MyCipher
     {
         string textToEncrypt;
 

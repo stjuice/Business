@@ -6,12 +6,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Business.Tests
 {
     [TestClass]
-    public class MyChiffreTest
+    public class MyCipherTest
     {
         [TestMethod]
-        public void MyChiffre_Encode()
+        public void MyCipher_Encode()
         {
-            var chiffre = new MyChiffre();
+            var chiffre = new MyCipher();
             var text = "Some text";
             var keyWord = "burry";
 
@@ -19,9 +19,9 @@ namespace Business.Tests
         }
 
         [TestMethod]
-        public void MyChiffre_Decode()
+        public void MyCipher_Decode()
         {
-            var chiffre = new MyChiffre();
+            var chiffre = new MyCipher();
             var text = "Some text";
             var keyWord = "burry";
 
@@ -31,9 +31,9 @@ namespace Business.Tests
         }
 
         [TestMethod]
-        public void MyChiffre_Encode_KeyWordLongerThenText()
+        public void MyCipher_Encode_KeyWordLongerThenText()
         {
-            var chiffre = new MyChiffre();
+            var chiffre = new MyCipher();
             var text = "Some text";
             var keyWord = "lackadaisical";
 

@@ -9,6 +9,7 @@ namespace Business
     {
         Item<T> firstItem;
         Item<T> currentItem;
+        bool disposed = false;
 
         public MyListEnumerator(Item<T> firstItem)
         {
@@ -19,7 +20,18 @@ namespace Business
 
         T IEnumerator<T>.Current => Current;
 
-        public void Dispose() { }
+        public void Dispose() 
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposed) return;
+
+            disposed = true;
+        }
 
         public T Current => currentItem.CurrentItem;
 
