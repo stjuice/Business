@@ -46,6 +46,31 @@ namespace Business.Tests
         }
 
         [TestMethod]
+        public void MyList_Enumerator_CheckDisposing()
+        {
+            var myList = new MyList<int>();
+            myList.Add(34);
+            myList.Add(87);
+            myList.Add(100);
+            myList.Add(87);
+            myList.Add(20);
+
+
+            using (var listEnum = myList.GetEnumerator())
+            {
+                listEnum.Notify += DisplayMessage;
+                listEnum.MoveNext();
+                Console.WriteLine(listEnum.Current.ToString());
+            }
+
+        }
+
+        private static void DisplayMessage(object sender, DisposedEventArgs e)
+        {
+            Console.WriteLine($"Disposed: {e.disposed}");
+        }
+
+        [TestMethod]
         public void MyTestMethod()
         {
             var e = new MyEndlessEnumerable();

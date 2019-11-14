@@ -1,0 +1,14 @@
+C:\Users\v.tryfonova\source\repos\ConsoleApp1\MyEnumeratorDispose\bin\Debug\netcoreapp3.0\MyEnumeratorDisposeEvent.exe
+C:\Users\v.tryfonova\source\repos\ConsoleApp1\MyEnumeratorDispose\bin\Debug\netcoreapp3.0\MyEnumeratorDisposeEvent.deps.json
+C:\Users\v.tryfonova\source\repos\ConsoleApp1\MyEnumeratorDispose\bin\Debug\netcoreapp3.0\MyEnumeratorDisposeEvent.runtimeconfig.json
+C:\Users\v.tryfonova\source\repos\ConsoleApp1\MyEnumeratorDispose\bin\Debug\netcoreapp3.0\MyEnumeratorDisposeEvent.runtimeconfig.dev.json
+C:\Users\v.tryfonova\source\repos\ConsoleApp1\MyEnumeratorDispose\bin\Debug\netcoreapp3.0\MyEnumeratorDisposeEvent.dll
+C:\Users\v.tryfonova\source\repos\ConsoleApp1\MyEnumeratorDispose\bin\Debug\netcoreapp3.0\MyEnumeratorDisposeEvent.pdb
+C:\Users\v.tryfonova\source\repos\ConsoleApp1\MyEnumeratorDispose\bin\Debug\netcoreapp3.0\Business.dll
+C:\Users\v.tryfonova\source\repos\ConsoleApp1\MyEnumeratorDispose\bin\Debug\netcoreapp3.0\Business.pdb
+C:\Users\v.tryfonova\source\repos\ConsoleApp1\MyEnumeratorDispose\obj\Debug\netcoreapp3.0\MyEnumeratorDisposeEvent.AssemblyInfoInputs.cache
+C:\Users\v.tryfonova\source\repos\ConsoleApp1\MyEnumeratorDispose\obj\Debug\netcoreapp3.0\MyEnumeratorDisposeEvent.AssemblyInfo.cs
+C:\Users\v.tryfonova\source\repos\ConsoleApp1\MyEnumeratorDispose\obj\Debug\netcoreapp3.0\MyEnumeratorDisposeEvent.csproj.CopyComplete
+C:\Users\v.tryfonova\source\repos\ConsoleApp1\MyEnumeratorDispose\obj\Debug\netcoreapp3.0\MyEnumeratorDisposeEvent.dll
+C:\Users\v.tryfonova\source\repos\ConsoleApp1\MyEnumeratorDispose\obj\Debug\netcoreapp3.0\MyEnumeratorDisposeEvent.pdb
+C:\Users\v.tryfonova\source\repos\ConsoleApp1\MyEnumeratorDispose\obj\Debug\netcoreapp3.0\MyEnumeratorDisposeEvent.csprojAssemblyReference.cache
