@@ -9,23 +9,7 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            var myList = new MyList<int>();
-            myList.Add(34);
-            myList.Add(87);
-            myList.Add(100);
-            myList.Add(87);
-            myList.Add(20);
 
-
-            using (var listEnum = myList.GetEnumerator())
-            {
-                listEnum.MoveNext();
-                Console.WriteLine(listEnum.Current.ToString());
-            }
-
-
-
-            Console.Read();
         }
 
 

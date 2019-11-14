@@ -3,7 +3,7 @@ using Business;
 
 namespace MyEnumeratorDisposeEvent
 {
-    class Program
+    class MyEnumeratorDisposeEvent
     {
         static void Main(string[] args)
         {
