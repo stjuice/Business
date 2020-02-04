@@ -1,29 +1,19 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using System.Threading;
+using System.Reflection;
+using Business;
 
-namespace ConsoleApplication1
+namespace ConsoleApp3
 {
-    class SingleTone<T>
-        where T: new()
+    class Program
     {
-        static T obj;
-
-        private SingleTone() { }
-
-        public static void CreateSingleTone()
+        static void Main(string[] args)
         {
-            if (obj == null)
-                obj = new T();
+
         }
-    }
-    class Client
-    {
-        void Main()
-        {
-            SingleTone<int>.CreateSingleTone();
-        }
+
+
     }
 }
+
+
