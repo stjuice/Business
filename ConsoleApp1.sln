@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp2", "ConsoleApp2\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp3", "ConsoleApp3\ConsoleApp3.csproj", "{367DADE8-06B0-4AA6-A1CC-CEF844731E4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyEnumeratorDisposeEvent", "MyEnumeratorDispose\MyEnumeratorDisposeEvent.csproj", "{C1A01708-388E-4384-8BAC-1B450693615B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyEnumeratorDisposeEvent", "MyEnumeratorDispose\MyEnumeratorDisposeEvent.csproj", "{C1A01708-388E-4384-8BAC-1B450693615B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factorial", "Factorial\Factorial.csproj", "{5B4A3928-3AB2-4700-81D5-2D5F84C88491}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Expression", "Expression\Expression.csproj", "{D005310B-D3DE-4091-A232-6F68B957C126}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{C1A01708-388E-4384-8BAC-1B450693615B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1A01708-388E-4384-8BAC-1B450693615B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1A01708-388E-4384-8BAC-1B450693615B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B4A3928-3AB2-4700-81D5-2D5F84C88491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B4A3928-3AB2-4700-81D5-2D5F84C88491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B4A3928-3AB2-4700-81D5-2D5F84C88491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B4A3928-3AB2-4700-81D5-2D5F84C88491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D005310B-D3DE-4091-A232-6F68B957C126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D005310B-D3DE-4091-A232-6F68B957C126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D005310B-D3DE-4091-A232-6F68B957C126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D005310B-D3DE-4091-A232-6F68B957C126}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
